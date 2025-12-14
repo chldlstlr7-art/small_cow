@@ -12,32 +12,43 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  title: "스톡파일럿 - 현명한 투자 계산기",
-  description: "물타기 계산, 수익률 분석, 재무 데이터 확인까지. 당신의 주식 투자를 돕는 스마트한 도구 모음.",
-  keywords: ["주식", "물타기계산기", "수익률", "삼성전자", "재무제표", "스톡파일럿"],
-  verification: {
-    other: {
-      "naver-site-verification": "8a871781293d49951f2d79e651c2dbfc929878d8",
+    title: "스톡파일럿 - 주식 투자 계산기 (평단가, 복리, 배당금)",
+    description: "물타기 계산, 평단가 계산, 복리 시뮬레이션, 배당금 예상 지급일 및 단타 순수익 계산까지. 당신의 주식 투자를 돕는 스마트한 도구 모음.",
+    keywords: [
+      "주식 계산기", 
+      "물타기계산기", 
+      "평단가 계산", 
+      "주식 수익률", 
+      "복리 계산", 
+      "배당금 계산", 
+      "배당락일", 
+      "단타 수수료",
+      "백테스팅",
+      "삼성전자",
+      "스톡파일럿"
+    ], // 새로 만든 기능을 반영하여 확장
+    verification: {
+        other: {
+            "naver-site-verification": "8a871781293d49951f2d79e651c2dbfc929878d8",
+        },
     },
-  },
-  openGraph: {
-    title: "스톡파일럿 - 현명한 투자 계산기",
-    description: "복잡한 계산은 맡기고 투자에만 집중하세요.",
-    url: "https://stock-blend-calculate.vercel.app",
-    siteName: "Stock Pilot",
-    images: [
-      {
-        url: "/thumbnail.png",
-        width: 1200,
-        height: 630,
-        alt: "Stock Pilot Preview",
-      },
-    ],
-    locale: "ko_KR",
-    type: "website",
-  },
+    openGraph: {
+        title: "스톡파일럿 - 현명한 투자 계산기",
+        description: "복잡한 계산은 맡기고 투자에만 집중하세요. (평단가, 복리, 배당금)",
+        url: "https://stock-blend-calculate.vercel.app",
+        siteName: "Stock Pilot",
+        images: [
+            {
+                url: "/thumbnail.png",
+                width: 1200,
+                height: 630,
+                alt: "Stock Pilot Preview",
+            },
+        ],
+        locale: "ko_KR",
+        type: "website",
+    },
 };
 
 export default function RootLayout({
@@ -92,7 +103,7 @@ export default function RootLayout({
               >
                 배당금
               </Link>
-              
+
               <Link 
                 href="/daytrade" 
                 className="px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-all hidden sm:inline-block"
