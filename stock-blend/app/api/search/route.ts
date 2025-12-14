@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 // 🇰🇷 [수동 DB] 한국 주요 주식 리스트 (시가총액 상위 + 인기주)
 // 필요하면 여기에 계속 추가하시면 됩니다. 검색 속도 0ms 보장.
-const KOREAN_STOCKS = [
+const KOREAN_STOCKS: { name: string; symbol: string; keywords: string[] }[] = [
   { name: '삼성전자', symbol: '005930.KS', keywords: [] },
   { name: 'SK하이닉스', symbol: '000660.KS', keywords: [] },
   { name: 'LG에너지솔루션', symbol: '373220.KS', keywords: [] },
